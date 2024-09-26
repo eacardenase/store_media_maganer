@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    volumes:
+      - ./src/:/app
+      - /var/www/html/magento/pub/media/wysiwyg/smartwave/porto/homepage/test:/tmp/media/banner
+      - /var/www/html/magento/pub/media/logo/stores/102:/tmp/media/logo
+    ports:
+      - 5557:5000
